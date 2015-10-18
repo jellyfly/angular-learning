@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Interpolate Provider</title>
+	<script type="text/javascript" 
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js">
+	</script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="emailParser.js"></script>
+</head>
+<body>
+	<div id="emailEditor" ng-controller="MyController">
+		<input ng-model="to"
+			type="email"
+			placeholder="Recipient" />
+		<textarea ng-model="emailBody"></textarea>
+	
+		<div id="emailPreview">
+			<pre>__previewText__</pre>
+		</div>
+	</div>
+</body>
+</html>
