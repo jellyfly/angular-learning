@@ -4,30 +4,41 @@
 	<title>Sign up form</title>
 </head>
 <body>
-	<form name="signup_form" novalidate ng-submit="signupForm()">
+	<form name="signup_form" novalidate ng-submit="signupForm()" ng-controller="signupController">
 		<fieldset>
-			<legend>Signup</legend>
-			<button type="submit" class="button radius">Submit</button>
+			<legend>Signup</legend>		
+			<div class="row">
+				<div class="large-12 columns">
+					<label>
+						Your name
+					</label>
+					<input type="text"
+						placeholder="Name"
+						name="name"
+						ng-model="signup.name"
+						ng-minlength=3
+						ng-maxlength=20
+						required />
+					<div class="error"
+						ng-show="signup_form.name.$dirty && signup_form.name.$invalid">
+					<small class="error"
+						ng-show="signup_form.name.$error.minlength">
+						Your name is required to be at least 3 characters.
+					</small>
+					<small class="error" ng-show="signup_form.name.$error.maxlength">
+						Your name cannot be longer than 20 characters.
+					</small>
+					<small class="error" ng-show="signup_form.email.$error.maxlength">
+						Your email cannot be longer than 20 characters
+					</small>
+					<small class="error" ng-show="signup_form.username.$error.unique">
+						That username is taken, please try another
+					</small>
+					</div>
+				</div>
+			</div>
+		<button type="submit" class="button radius">Submit</button>
 		</fieldset>
 	</form>
-	<div class="row">
-		<div class="large-12 columns">
-			<label>
-				Your name
-			</label>
-			<input type="text"
-				placeholder="Name"
-				name="name"
-				ng-model="signup.name"
-				ng-minlength=3
-				ng-maxlength=20
-				required />
-			<div class="error"
-				ng-show="signup_form.name.$dirty && signup_form.name.$invalid">
-				
-				
-			</div>
-		</div>
-	</div>
 </body>
 </html>
