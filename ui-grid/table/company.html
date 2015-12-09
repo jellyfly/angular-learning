@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="company">
+<head>
+	<title>UI-Router Proof of Concept</title>
+
+	<!--external scripts-->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-touch.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+	<script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+	<script src="http://ui-grid.info/release/ui-grid.js"></script>
+
+	<!--custom scripts-->
+	<script type="text/javascript" src="company.js"></script>
+
+	<!--external stylesheets-->
+	<link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+</head>
+<body>
+	<div ng-controller="CompanyController">
+		<div id="companyGrid" ui-grid="{ data: information[0].companies }" class="grid"></div>
+	</div>
+</body>
+</html>
