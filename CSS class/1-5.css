@@ -1,0 +1,58 @@
+h1 {
+	background: #B3B3B3;
+	font-size: 150%;
+}
+
+header {
+	background: #666666;
+	text-align: center;
+}
+
+h1 {
+	color: #FFFFFF;
+}
+
+nav {
+	font-variant: small-caps;
+	font-size: 150%;
+	font-family: Arial, "Times New Roman", serif;
+}
+
+h2 {
+	color: #666666;
+	background: #00B7EA;
+}
+
+details {
+	font-style: italic;
+}
+
+summary {
+	font-style: normal;
+}
+
+footer {
+	background-color: #666666；
+}
+
+span {
+	height:50px;
+	width:75px;
+	background:#00FF00;
+	display:inline-block; /*try block, none, inline*/
+	float: right;
+}
+
+div {
+	height:100px;
+	width:45%;
+	background:#00FFFF;
+	float:right;
+}
+
+p {
+	background:#FF00FF;
+	width: 200px;
+	height:100px;
+	clear: both;
+}

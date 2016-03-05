@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p class="duplicate"></p>
+	<p class="duplicate"></p>
+	<p class="duplicate"></p>
+	<p></p>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		// select all paragraph elements
+		var paragraphs = $("p");
+
+		// returns 7
+		console.log(paragraphs.length);
+
+		// turn it into an array
+		paragraphs = $.makeArray(paragraphs);
+
+		// get elements of class duplicate and immediately transform them to array
+		var dups = $.makeArray($(".duplicate"));
+
+		// concat them into our paragraphs array
+		paragraphs = paragraphs.concat(dups);
+
+		// returns 10
+		console.log(paragraphs.length);
+
+		// get rid of the dups
+		paragraphs = $.unique(paragraphs);
+
+		// returns 7
+		console.log(paragraphs.length);
+
+		var index = $.inArray("6", paragraphs);
+
+		// returns -1
+		console.log(index);
+	});
+	</script>
+</body>
+</html>
